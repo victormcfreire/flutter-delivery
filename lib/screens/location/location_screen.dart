@@ -1,6 +1,9 @@
+import 'package:delivery_flutter/widgets/gmap.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+import '../../widgets/location_search_box.dart';
 
 class LocationScreen extends StatelessWidget {
   const LocationScreen({Key? key}) : super(key: key);
@@ -18,9 +21,7 @@ class LocationScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Container(
-            color: Colors.grey[300],
-          ),
+          const Gmap(),
           Positioned(
             top: 40,
             left: 20,
@@ -36,7 +37,12 @@ class LocationScreen extends StatelessWidget {
                   const SizedBox(
                     width: 10,
                   ),
-                  const Expanded(child: LocationSearchBox()),
+                  Expanded(
+                      child: Column(
+                    children: const [
+                      LocationSearchBox(),
+                    ],
+                  )),
                 ],
               ),
             ),
@@ -54,40 +60,6 @@ class LocationScreen extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class LocationSearchBox extends StatelessWidget {
-  const LocationSearchBox({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: TextField(
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: Colors.white,
-          hintText: 'Enter Your Location',
-          suffixIcon: Icon(Icons.search),
-          contentPadding: const EdgeInsets.only(left: 20, bottom: 5, right: 5),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(
-              color: Colors.white,
-            ),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-            borderSide: const BorderSide(
-              color: Colors.white,
-            ),
-          ),
-        ),
       ),
     );
   }

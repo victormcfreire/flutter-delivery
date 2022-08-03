@@ -47,19 +47,30 @@ class LocationScreen extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-            bottom: 40,
-            left: 20,
-            right: 20,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 70.0),
-              child: ElevatedButton(
-                child: const Text('Save'),
-                onPressed: () {},
-              ),
-            ),
-          ),
+          const SaveButton(),
         ],
+      ),
+    );
+  }
+}
+
+class SaveButton extends StatelessWidget {
+  const SaveButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned(
+      bottom: 40,
+      left: 20,
+      right: 20,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 70.0),
+        child: ElevatedButton(
+          child: const Text('Save'),
+          onPressed: () {},
+        ),
       ),
     );
   }

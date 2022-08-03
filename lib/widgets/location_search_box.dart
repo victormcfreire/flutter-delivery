@@ -15,7 +15,7 @@ class LocationSearchBox extends StatelessWidget {
           fillColor: Colors.white,
           hintText: 'Enter Your Location',
           suffixIcon: const Icon(Icons.search),
-          contentPadding: const EdgeInsets.only(left: 20, bottom: 5, right: 5),
+          contentPadding: const EdgeInsets.only(left: 20, bottom: 5, top: 5),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: const BorderSide(

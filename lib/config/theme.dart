@@ -4,6 +4,7 @@ ThemeData theme() {
   return ThemeData(
     colorScheme: const ColorScheme.light().copyWith(
       primary: const Color(0xFFFE3C5B),
+      secondary: const Color.fromARGB(255, 192, 24, 52),
     ),
     scaffoldBackgroundColor: Colors.white,
     backgroundColor: const Color(0xFFF5F5F5),

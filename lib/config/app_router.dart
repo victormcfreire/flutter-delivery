@@ -1,3 +1,4 @@
+import 'package:delivery_flutter/models/models.dart';
 import 'package:delivery_flutter/screens/screens.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +21,8 @@ class AppRouter {
       case FilterScreen.routeName:
         return FilterScreen.route();
       case RestaurantDetailsScreen.routeName:
-        return RestaurantDetailsScreen.route();
+        return RestaurantDetailsScreen.route(
+            restaurant: settings.arguments as Restaurant);
       case RestaurantListingScreen.routeName:
         return RestaurantListingScreen.route();
       case VoucherScreen.routeName:

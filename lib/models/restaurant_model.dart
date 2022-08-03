@@ -42,7 +42,11 @@ class Restaurant extends Equatable {
       name: 'Il Panino del Laghetto',
       imageUrl:
           'https://images.unsplash.com/photo-1479044769763-c28e05b5baa5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-      tags: const ['Italian', 'Dessert', 'Ice Cream'],
+      tags: MenuItem.menuItems
+          .where((menuItem) => menuItem.restaurantId == 1)
+          .map((menuItem) => menuItem.category)
+          .toSet()
+          .toList(),
       menuItems: MenuItem.menuItems
           .where((menuItem) => menuItem.restaurantId == 1)
           .toList(),
@@ -55,7 +59,11 @@ class Restaurant extends Equatable {
       name: 'Viaggi Nel Gusto',
       imageUrl:
           'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80',
-      tags: const ['Italian', 'Pizza'],
+      tags: MenuItem.menuItems
+          .where((menuItem) => menuItem.restaurantId == 2)
+          .map((menuItem) => menuItem.category)
+          .toSet()
+          .toList(),
       menuItems: MenuItem.menuItems
           .where((menuItem) => menuItem.restaurantId == 2)
           .toList(),
@@ -68,7 +76,11 @@ class Restaurant extends Equatable {
       name: 'Tandoori Bites',
       imageUrl:
           'https://images.unsplash.com/photo-1428515613728-6b4607e44363?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-      tags: const ['Indian', 'Asian'],
+      tags: MenuItem.menuItems
+          .where((menuItem) => menuItem.restaurantId == 3)
+          .map((menuItem) => menuItem.category)
+          .toSet()
+          .toList(),
       menuItems: MenuItem.menuItems
           .where((menuItem) => menuItem.restaurantId == 3)
           .toList(),
@@ -81,9 +93,13 @@ class Restaurant extends Equatable {
       name: 'Tandoori Bites',
       imageUrl:
           'https://images.unsplash.com/photo-1428515613728-6b4607e44363?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
-      tags: const ['Indian', 'Asian'],
+      tags: MenuItem.menuItems
+          .where((menuItem) => menuItem.restaurantId == 4)
+          .map((menuItem) => menuItem.category)
+          .toSet()
+          .toList(),
       menuItems: MenuItem.menuItems
-          .where((menuItem) => menuItem.restaurantId == 3)
+          .where((menuItem) => menuItem.restaurantId == 4)
           .toList(),
       deliveryTime: 30,
       deliveryFee: 2.99,

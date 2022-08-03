@@ -112,5 +112,14 @@ class MenuItem extends Equatable {
       price: 4.99,
       //imageUrl: imageUrl,
     ),
+    MenuItem(
+      id: 10,
+      restaurantId: 2,
+      name: 'Coca Cola',
+      category: 'Salad',
+      description: 'A fresh drink',
+      price: 4.99,
+      //imageUrl: imageUrl,
+    ),
   ];
 }

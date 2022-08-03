@@ -24,10 +24,10 @@ class AppRouter {
         return RestaurantDetailsScreen.route(
             restaurant: settings.arguments as Restaurant);
       case RestaurantListingScreen.routeName:
-        return RestaurantListingScreen.route();
+        return RestaurantListingScreen.route(
+            restaurants: settings.arguments as List<Restaurant>);
       case VoucherScreen.routeName:
         return VoucherScreen.route();
-        break;
       default:
         return _errorRoute();
     }

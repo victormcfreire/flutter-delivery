@@ -1,6 +1,5 @@
 import 'package:delivery_flutter/models/models.dart';
 import 'package:delivery_flutter/screens/screens.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {

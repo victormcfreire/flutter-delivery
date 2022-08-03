@@ -6,7 +6,7 @@ class Category extends Equatable {
   final String name;
   final Image image;
 
-  Category({
+  const Category({
     required this.id,
     required this.name,
     required this.image,

@@ -50,7 +50,9 @@ class FoodSearchBox extends StatelessWidget {
                 Icons.menu,
                 color: Theme.of(context).colorScheme.primary,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/filters');
+              },
             ),
           ),
         ],
